@@ -1,7 +1,5 @@
 ﻿using System.Threading.Tasks;
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using WebApi.Models;
 
 namespace WebApi.Controllers
@@ -10,13 +8,8 @@ namespace WebApi.Controllers
     [Route("[controller]")]
     public class LessonController: ControllerBase
     {
-        private readonly ILogger<LessonController> _logger;
-        private IMapper _mapper;
-
-        public LessonController(Logger<LessonController> logger, IMapper mapper)
+        public LessonController()
         {
-            _logger = logger;
-            _mapper = mapper;
         }
 
         [HttpGet("{id}")]
